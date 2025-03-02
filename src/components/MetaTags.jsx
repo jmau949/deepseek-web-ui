@@ -24,12 +24,6 @@ const MetaTags = ({
       <meta property="og:image" content={ogImageUrl} />
       <meta property="og:description" content={description} />
 
-      {/* Twitter metadata */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@REPLACEME" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={twitterImageUrl} />
 
       {/* Robots */}
       <meta name="robots" content="index, follow" />

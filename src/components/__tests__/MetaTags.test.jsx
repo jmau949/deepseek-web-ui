@@ -68,39 +68,6 @@ describe("MetaTags component", () => {
     expect(ogDescription).toBeInTheDocument();
     expect(ogDescription.getAttribute("content")).toEqual(props.description);
 
-    // Twitter meta tags
-    const twitterCard = document.head.querySelector(
-      'meta[name="twitter:card"]'
-    );
-    expect(twitterCard).toBeInTheDocument();
-    expect(twitterCard.getAttribute("content")).toEqual("summary_large_image");
-
-    const twitterSite = document.head.querySelector(
-      'meta[name="twitter:site"]'
-    );
-    expect(twitterSite).toBeInTheDocument();
-    expect(twitterSite.getAttribute("content")).toEqual("@REPLACEME");
-
-    const twitterTitle = document.head.querySelector(
-      'meta[name="twitter:title"]'
-    );
-    expect(twitterTitle).toBeInTheDocument();
-    expect(twitterTitle.getAttribute("content")).toEqual(props.title);
-
-    const twitterDescription = document.head.querySelector(
-      'meta[name="twitter:description"]'
-    );
-    expect(twitterDescription).toBeInTheDocument();
-    expect(twitterDescription.getAttribute("content")).toEqual(
-      props.description
-    );
-
-    const twitterImage = document.head.querySelector(
-      'meta[name="twitter:image"]'
-    );
-    expect(twitterImage).toBeInTheDocument();
-    expect(twitterImage.getAttribute("content")).toEqual(props.twitterImageUrl);
-
     // Robots meta tag
     const metaRobots = document.head.querySelector('meta[name="robots"]');
     expect(metaRobots).toBeInTheDocument();
